@@ -1,29 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
 
-@Component({
-  components: {
-    HelloWorld
-  }
-})
+@Component({})
 export default class App extends Vue {}
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+@import url("./assets/font/iconfont.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+html,
+body {
+  background-color: #1e2125;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-width: 600px;
+  min-height: 600px;
+
+  background-color: #1e2125;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
